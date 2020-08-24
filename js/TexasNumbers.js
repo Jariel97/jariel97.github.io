@@ -2,7 +2,7 @@ texasConfirmedDeaths();
   function texasConfirmedDeaths(){
     var Texas = "Texas";
     var bodyData ={'placeValue': Texas};
-    fetch('http://127.0.0.1:5000/texasData', {method: "POST",headers: {'Content-Type': 'application/json'},body: JSON.stringify(bodyData)})
+    fetch('/api/texasData', {method: "POST",headers: {'Content-Type': 'application/json'},body: JSON.stringify(bodyData)})
       .then((response) => {
         return response.json();
       })
